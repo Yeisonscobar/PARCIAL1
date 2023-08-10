@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="300.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="com.example.proyecto1.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <TabPane prefHeight="360.0" prefWidth="283.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Operaciones">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="-2.0" prefHeight="329.0" prefWidth="260.0">
+                           <children>
+                              <TextField fx:id="textfieldnumeros" layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="235.0" />
+                              <GridPane layoutX="14.0" layoutY="51.0" prefHeight="277.0" prefWidth="235.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button fx:id="ButtonClean" mnemonicParsing="false" onAction="#cleanScreen" prefHeight="55.0" prefWidth="63.0" text="C" />
+                                    <Button fx:id="ButtonDelete" mnemonicParsing="false" onAction="#deleteValue" prefHeight="56.0" prefWidth="60.0" text="Del" GridPane.columnIndex="1" />
+                                    <Button fx:id="ButtonPorcentaje" mnemonicParsing="false" onAction="#addOperacion" prefHeight="60.0" prefWidth="59.0" text="\%" GridPane.columnIndex="2" />
+                                    <Button fx:id="ButtonDivision" mnemonicParsing="false" onAction="#addOperacion" prefHeight="56.0" prefWidth="59.0" text="/" GridPane.columnIndex="3" />
+                                    <Button fx:id="Button7" mnemonicParsing="false" onAction="#addValue" prefHeight="56.0" prefWidth="59.0" text="7" GridPane.rowIndex="1" />
+                                    <Button fx:id="Button8" mnemonicParsing="false" onAction="#addValue" prefHeight="56.0" prefWidth="59.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button fx:id="Button9" mnemonicParsing="false" onAction="#addValue" prefHeight="57.0" prefWidth="59.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Button fx:id="ButtonMultiplicacion" mnemonicParsing="false" onAction="#addOperacion" prefHeight="55.0" prefWidth="59.0" text="X" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Button fx:id="Button4" mnemonicParsing="false" onAction="#addValue" prefHeight="53.0" prefWidth="61.0" text="4" GridPane.rowIndex="2" />
+                                    <Button fx:id="Button1" mnemonicParsing="false" onAction="#addValue" prefHeight="55.0" prefWidth="59.0" text="1" GridPane.rowIndex="3" />
+                                    <Button fx:id="Button0" mnemonicParsing="false" onAction="#addValue" prefHeight="55.0" prefWidth="58.0" text="0" GridPane.rowIndex="4" />
+                                    <Button fx:id="Button5" mnemonicParsing="false" onAction="#addValue" prefHeight="55.0" prefWidth="61.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button fx:id="Button2" mnemonicParsing="false" onAction="#addValue" prefHeight="56.0" prefWidth="59.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#addValue" prefHeight="62.0" prefWidth="59.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Button fx:id="Button6" mnemonicParsing="false" onAction="#addValue" prefHeight="55.0" prefWidth="60.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Button fx:id="ButtonResta" mnemonicParsing="false" onAction="#addOperacion" prefHeight="60.0" prefWidth="59.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <Button fx:id="Button3" mnemonicParsing="false" onAction="#addValue" prefHeight="55.0" prefWidth="60.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Button fx:id="ButtonSuma" mnemonicParsing="false" onAction="#addOperacion" prefHeight="55.0" prefWidth="60.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <Button fx:id="ButtonAns" mnemonicParsing="false" onAction="#getLastResultado" prefHeight="63.0" prefWidth="59.0" text="ANS" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <Button fx:id="ButtonIgual" mnemonicParsing="false" onAction="#makeOperation" prefHeight="55.0" prefWidth="61.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Historial">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="textarearesultadohistorial" editable="false" layoutX="5.0" layoutY="6.0" prefHeight="317.0" prefWidth="249.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Configuracion">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="7.0" layoutY="26.0" text="Selecionar Color:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <ColorPicker layoutX="154.0" layoutY="29.0" prefHeight="25.0" prefWidth="92.0" />
+                        <Pane layoutX="30.0" layoutY="83.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="16.0" layoutY="300.0" text="Creador: Oscar Lemus" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
